@@ -1,0 +1,69 @@
+
+@media (max-width: 768px){
+    header {
+        padding : 20px 50px;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px;
+    }
+    header::after {
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: var(primary)
+    }
+    .logo {
+        margin-top: 10px;
+    }
+
+    .nav{
+        right: 0;
+        width: 100%;
+    }
+
+    .nav.active {
+        right: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        border: none;
+    }
+
+    .banner {
+        padding: 50px 30px 100px;
+
+    }
+    .banner .content {
+        position: relative;
+        max-width: 700px;
+        padding: 50px 0 100px;
+    }
+    .banner .content h1 {
+        font-size: 5em;
+    }
+
+    .banner .content .model {
+        font-size: 2em;
+    }
+    .banner .content a {
+        width: 150px;
+        padding: 10px 30px ;
+    }
+    .banner .screen {
+        display: none;
+    }
+
+    .banner .gallery {
+        width: 100%;
+        left: 0;
+
+    }
+
+    .sci {
+        right: 20px;
+    }
+
+
+}

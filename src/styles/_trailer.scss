@@ -1,0 +1,107 @@
+@use 'variaveis';
+
+.play {
+    position: absolute;
+    bottom: 50px;
+    left: 100px;
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: variaveis.$corPrincipal;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: 0.3s;
+
+    @media (max-width: 768px) {
+        left: 20px;
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+
+
+    i {
+        margin-right: 10px;
+        font-size: 40px;
+        cursor: pointer !important;
+    }
+
+    &:hover {
+        color: variaveis.$corSecundario;
+    }
+}
+
+.sci {
+    position: absolute;
+    bottom: 50px;
+    right: 100px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+
+    @media (max-width: 768px) {
+        right: 20px;
+    }
+
+    a {
+        color: variaveis.$corPrincipal;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 500;
+        letter-spacing: 1px;
+        font-size: 25px;
+        transition: 0.3s;
+        cursor: pointer;
+
+        &:hover {
+            color: variaveis.$corSecundario;
+        }
+    }
+
+}
+
+.trailer {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(20px);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+
+    @media (max-width: 768px) {
+        left: 20px;
+        font-size: 10px;
+    }
+
+    &--active {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .video {
+        max-width: 900px;
+        outline: none;
+    }
+
+    .close {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        cursor: pointer;
+        filter: invert(1);
+        max-width: 30;
+    }
+}

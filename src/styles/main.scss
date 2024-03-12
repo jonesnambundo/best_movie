@@ -1,0 +1,67 @@
+@use 'banner';
+@use 'variaveis';
+@use 'carousel';
+@use 'trailer';
+@use 'header';
+
+@font-face {
+    font-family: Poppins;
+    src: url(/assets/fonts/fontawesome-webfont.woff);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url(/assets/fonts/fontawesome-webfont.woff2);
+    font-weight:600;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color:variaveis.$corDeFundo;
+    font-family: Poppins, sans-serif;
+}
+
+@mixin text($fontSize:14px){
+    font-size: $fontSize;
+    line-height: $fontSize + 10px;
+    color:variaveis.$corPrincipal;
+}
+
+@mixin title($fontSize: 12px){
+    @include text($fontSize);
+    color:variaveis.$corPrincipal;
+}
+
+.text--big{
+    @include text(30px)
+
+}
+
+.text { 
+    @include text;
+}
+
+.text--small {
+    @include text(12px)
+}
+
+.title--big{
+    @include title(30px);
+    @media (max-width: 768px){
+        @include text(20px);
+    }
+}
+
+.title {
+    @include title(16px);
+}
+
+.title--small {
+    @include title(12);
+}
